@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Flight</title>
+    <style>
+        /* Set a solid blue background for the body */
+        body {
+            background-color: #007BFF; /* You can adjust this hex code for different shades of blue */
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slight white transparency for better readability */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .flight-results {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .flight {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .flight:hover {
+            background-color: #f2f2f2;
+        }
+
+        .airline {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .airline img {
+            width: 50px;
+            height: auto;
+        }
+
+        .flight-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 400px;
+        }
+
+        .flight-details p {
+            margin: 0;
+            text-align: center;
+            flex: 1;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #333;
+            margin-left: 20px;
+            flex: 0 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flight-results">
+            <a href="/payment" class="flight"> <!-- Updated to redirect to /payment -->
+                <div class="airline">
+                    <img src="/images/British-Airways-Logo.png" alt="British Airways"> <!-- Updated image path -->
+                    <p>BRITISH AIRWAYS</p>
+                </div>
+                <div class="flight-details">
+                    <p class="departure-time">21:30</p>
+                    <p class="duration">8h 50m</p>
+                    <p class="arrival-time">09:50</p>
+                    <p class="price">₹54,000</p>
+                </div>
+            </a>
+            <a href="/payment" class="flight"> <!-- Updated to redirect to /payment -->
+                <div class="airline">
+                    <img src="/images/vistara.png" alt="Vistara"> <!-- Updated image path -->
+                    <p>VISTARA</p>
+                </div>
+                <div class="flight-details">
+                    <p class="departure-time">20:35</p>
+                    <p class="duration">13h</p>
+                    <p class="arrival-time">18:05</p>
+                    <p class="price">₹61,530</p>
+                </div>
+            </a>
+            <a href="/payment" class="flight"> <!-- Updated to redirect to /payment -->
+                <div class="airline">
+                    <img src="/images/Air.jpeg" alt="Air India"> <!-- Updated image path -->
+                    <p>AIR INDIA</p>
+                </div>
+                <div class="flight-details">
+                    <p class="departure-time">22:25</p>
+                    <p class="duration">13h 5m</p>
+                    <p class="arrival-time">15:00</p>
+                    <p class="price">₹69,306</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+    

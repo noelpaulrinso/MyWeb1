@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('/images/flight1.jpg') no-repeat center center fixed; 
+            background-size: cover;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .fly-link,
+        .signup-link {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #ff6600;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+
+        .fly-link:hover,
+        .signup-link:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="centered-text">
+            <h1>Find And Book A Great Experience</h1>
+            <a href="/login" class="fly-link">Login</a> <!-- Updated link -->
+            <a href="/signup" class="signup-link">Signup</a>
+        </div>
+    </div>
+</body>
+</html>
