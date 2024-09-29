@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 const path = require('path');
 
 const app = express();
-const port = process.env.PORT || 3000; // Use port from environment variables or default to 3000
+const port = process.env.PORT ; // Use port from environment variables or default to 3000
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -14,10 +14,10 @@ app.use(express.static(path.join(__dirname, 'public'))); // Serve static files l
 
 // MySQL connection using environment variables
 const db = mysql.createConnection({
-    host: process.env.DB_HOST || 'localhost',
-    user: process.env.DB_USER || 'root',
-    password: process.env.DB_PASSWORD || '', // Default for XAMPP is an empty password
-    database: process.env.DB_NAME || 'user_auth' // Default database name
+    host: process.env.DB_HOST ,
+    user: process.env.DB_USER ,
+    password: process.env.DB_PASSWORD, // Default for XAMPP is an empty password
+    database: process.env.DB_NAME // Default database name
 });
 
 // Connect to MySQL
