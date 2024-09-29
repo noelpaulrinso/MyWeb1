@@ -49,7 +49,7 @@ app.post('/signup', async (req, res) => {
     }
 
     // Check if username already exists
-    const checkUserSql = 'SELECT * FROM login_details WHERE username = ?';
+    const checkUserSql = 'SELECT * FROM login WHERE username = ?';
     db.query(checkUserSql, [username], async (err, results) => {
         if (err) {
             console.error('Error fetching user data:', err);
@@ -66,7 +66,7 @@ app.post('/signup', async (req, res) => {
             const hashedPassword = await bcrypt.hash(password, 10);
 
             // Insert new user into the database
-            const insertSql = 'INSERT INTO login_details (username, email, password) VALUES (?, ?, ?)';
+            const insertSql = 'INSERT INTO login (username, email, password) VALUES (?, ?, ?)';
             db.query(insertSql, [username, email, hashedPassword], (err, result) => {
                 if (err) {
                     console.error('Error inserting user data:', err.message);
@@ -91,7 +91,7 @@ app.post('/login', async (req, res) => {
     const { username, password } = req.body;
 
     // Query to check if user exists
-    const sql = 'SELECT * FROM login_details WHERE username = ?';
+    const sql = 'SELECT * FROM login WHERE username = ?';
     db.query(sql, [username], async (err, results) => {
         if (err) {
             console.error('Error fetching user data:', err);
